@@ -7,8 +7,11 @@ import com.example.obrestdatajpa.repository.LaptopRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.time.LocalDate;
+
 
 @SpringBootApplication
 public class ObRestDatajpaApplication {
@@ -22,7 +25,7 @@ public class ObRestDatajpaApplication {
 		//Crear una laptop
 		Laptop laptop1 = new Laptop(1,"S21","Intell",250,1528.20,true);
 		Laptop laptop2 = new Laptop(2,"S28","Lenovo",259,1999.20,false);
-		//almacenar libro
+		//almacenar laptop
 		laptopRepository.save(laptop1);
 		laptopRepository.save(laptop2);
 		System.out.println("Numero de laptops en la base de datos "+laptopRepository.findAll().size());

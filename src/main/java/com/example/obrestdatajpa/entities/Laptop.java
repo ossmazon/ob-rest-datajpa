@@ -7,6 +7,7 @@ import java.time.LocalDate;
 @Table(name="laptops")
 public class Laptop {
     @Id
+    //notacion para auto asignar y generar las llaves primarias cuando se agregue un nuevo objeto
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String model;
