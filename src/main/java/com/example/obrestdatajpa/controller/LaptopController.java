@@ -21,7 +21,8 @@ public class LaptopController {
 
     @GetMapping("/api/laptops")
     public List<Laptop> findAll(){
-     return laptopRepository.findAll();
+
+        return laptopRepository.findAll();
     }
 
     @GetMapping("/api/laptop/{id}")
