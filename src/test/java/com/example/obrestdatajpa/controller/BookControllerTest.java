@@ -48,7 +48,7 @@ class BookControllerTest {
         ResponseEntity<Book> response =
                 testRestTemplate.getForEntity("/api/books/1", Book.class);
 
-        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
+        assertEquals(HttpStatus.OK, response.getStatusCode());
     }
 
     @Test
